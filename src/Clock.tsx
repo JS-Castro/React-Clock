@@ -107,24 +107,26 @@ export default function Clock() {
 
   return (
     <>
-      <div className="wrapper">
-        {padTime(clock.hours)
-          .split("")
-          .map((digit, idx) => (
-            <Digit key={idx} digit={digit} />
-          ))}
-        :
-        {padTime(clock.minutes)
-          .split("")
-          .map((digit, idx) => (
-            <Digit key={idx} digit={digit} />
-          ))}
-        :
-        {padTime(clock.seconds)
-          .split("")
-          .map((digit, idx) => (
-            <Digit key={idx} digit={digit} />
-          ))}
+      <div className="container">
+        <div className="wrapper">
+          {padTime(clock.hours)
+            .split("")
+            .map((digit, idx) => (
+              <Digit key={idx} digit={digit} />
+            ))}
+          :
+          {padTime(clock.minutes)
+            .split("")
+            .map((digit, idx) => (
+              <Digit key={idx} digit={digit} />
+            ))}
+          :
+          {padTime(clock.seconds)
+            .split("")
+            .map((digit, idx) => (
+              <Digit key={idx} digit={digit} />
+            ))}
+        </div>
       </div>
     </>
   );
